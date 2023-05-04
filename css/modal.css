@@ -1,0 +1,539 @@
+.property-modal-container {
+  display: none;
+  height: 100vh;
+  background-image: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(16, 25, 32, 0.9)),
+      to(rgba(16, 25, 32, 0.9)));
+  background-image: linear-gradient(180deg,
+      rgba(16, 25, 32, 0.9),
+      rgba(16, 25, 32, 0.9));
+}
+
+.property-modal {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100000;
+  display: none;
+  /* padding-top: 100px; */
+  padding-bottom: 100px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.property-modal-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 60%;
+  height: 70vh;
+  max-width: 740px;
+  min-width: auto;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  border-radius: 20px 20px 20px 75px;
+  background-color: rgb(235, 241, 241);
+  position: relative;
+}
+
+.close-btn-form {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 27px;
+  height: 27px;
+  margin-top: 10px;
+  margin-right: 10px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #ff6764;
+}
+
+.close {
+  position: absolute;
+  top: 27px;
+  right: 15px;
+  color: #aaaaaa;
+  background-color: #ff6764;
+  font-size: 25px;
+  font-weight: bold;
+  /* margin-top: 10px; */
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.progressbar-container {
+  background-color: rgb(42, 40, 40);
+  width: 80%;
+  border-radius: 5px;
+  margin: 20px;
+  height: 27px;
+  margin-left: 60px;
+  margin-top: 35px;
+}
+
+.progress {
+  background-color: #ff6764;
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  height: 27px;
+}
+
+.percent {
+  width: 15%;
+}
+
+.modal-props {
+  width: 100%;
+}
+
+.select-property {
+  text-align: center;
+  margin-bottom: 65px;
+  /* margin-top: -35px; */
+}
+
+.enter-address {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -35px;
+  color: #2f455f;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.next-step {
+  color: #2f455f;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.choose-property {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.house {
+  text-align: center;
+}
+
+.school {
+  text-align: center;
+}
+
+.finance {
+  color: #ff6764;
+  font-style: italic;
+  font-size: small;
+  margin-top: 24px;
+}
+
+.click-next {
+  color: #ff6764;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: small;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.validate-telephone {
+  color: #ff6764;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: small;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resend-code-text {
+  color: #ff6764;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: small;
+  margin-left: 145px;
+  text-decoration: underline;
+}
+
+.resend-code-text-report {
+  color: #ff6764;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: small;
+  margin-left: 160px;
+  /* text-decoration: underline; */
+  margin-top: -50px;
+}
+
+#prev-arrow {
+  display: none;
+  position: absolute;
+  top: 4px;
+  left: 20px;
+}
+
+.switch-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 75px;
+  margin-right: 72px;
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 70px;
+  height: 30px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+input:checked+label {
+  background: #ff6764;
+}
+
+label:active:after {
+  width: 130px;
+}
+
+input:checked+label:after {
+  left: calc(100% - 10px);
+  transform: translateX(-100%);
+}
+
+input {
+  padding: 10px;
+  width: 80%;
+  font-size: 17px;
+}
+
+.form-energy {
+  text-align: center;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+
+.btn-submit-container {
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  margin-left: 25%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+.btn-submit-container-solar{
+  width: 60%;
+  text-align: center;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-bottom: 20px;
+}
+
+.digit-code-text {
+  color: #ff6764;
+  float: left;
+  width: 100%;
+  font-size: small;
+  margin-left: 144px;
+}
+
+.enter-valid-address {
+  color: #ff6764;
+  float: left;
+  width: 100%;
+  font-size: small;
+  margin-left: 140px;
+}
+
+.add-battery {
+  color: #ff6764;
+}
+
+.phone {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 6px;
+  padding: 0px 3px;
+}
+
+.otp {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  gap: 10px;
+  padding: 5px 5px;
+}
+
+.tab {
+  display: none;
+}
+
+.solar {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resend-submit {
+  margin-top: 20px;
+}
+
+.term-and-condition {
+  font-size: small;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.solar-view {
+  display: flex;
+}
+
+.right {
+  margin-top: -100px;
+  padding: 70px;
+}
+
+#select-house svg{
+  width: 90px;
+  height: 90px;
+}
+#select-school svg{
+  width: 90px;
+  height: 90px;
+}
+#yes-own svg {
+  width: 81px;
+  height: 81px;
+}
+#no-own svg {
+  width: 81px;
+  height: 81px;
+}
+
+.iti.iti--allow-dropdown {
+  width: 100%;
+}
+
+
+.iti--container {
+  z-index: 100000 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  /* .close-btn-form {
+    margin-top: 0px;
+  } */
+  .progressbar-container {
+    margin-top: 35px;
+  }
+  .select-property {
+    margin-bottom: 20px;
+  }
+  #select-house svg{
+    width: 60px;
+    height: 60px;
+  }
+
+  #select-school svg{
+    width: 60px;
+    height: 60px;
+  }
+
+  #yes-own svg {
+    width: 60px;
+    height: 60px;
+  }
+  #no-own svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  #yes-own h3 {
+    margin-top: 0px;
+  }
+
+  #no-own h3 {
+    margin-top: 0px;
+  }
+
+  .progressbar-container {
+    margin-left: 28px;
+    width: 75%;
+    height: 15px;
+  }
+  .progress{
+    height: 15px;
+  }
+
+  .property-modal-box {
+    width: 90%;
+    /* height: 70vh; */
+  }
+
+  .otp {
+    margin-right: 30px;
+  }
+
+  .term-and-condition {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .enter-valid-address {
+    margin-left: 45px;
+  }
+
+  .form-energy {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .switch-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .resend-code-text {
+    margin-left: 10px;
+  }
+
+  .enter-valid-address {
+    margin-left: 30px;
+  }
+
+  .select-property {
+    margin-top: -5px;
+  }
+
+  .digit-code-text {
+    margin-left: 40px;
+  }
+
+  #prev-arrow {
+    display: none;
+    position: absolute;
+    top: 9px;
+    left: 6px;
+  }
+
+  .right {
+    padding: 25px;
+  }
+
+  .resend-code-text-report {
+    margin-top: 4px;
+    margin-left: 25px;
+  }
+
+  .finance {
+    margin: 24px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .progressbar-container {
+    margin-left: 50px;
+    width: 75%;
+  }
+
+  .form-energy {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .finance {
+    margin: 24px;
+  }
+
+  .switch-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  .resend-code-text {
+    margin-left: 75px;
+  }
+
+  .enter-valid-address {
+    margin-left: 70px;
+  }
+
+  .digit-code-text {
+    margin-left: 74px;
+  }
+
+  .term-and-condition {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+
+.pac-container {
+  z-index: 99999999999 !important;
+}
